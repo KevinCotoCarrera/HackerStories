@@ -113,7 +113,7 @@ const App = () => {
   
     React.useEffect(() => {
       dispatchStories({ type: 'STORIES_FETCH_INIT' });
-      fetch(`${API_ENDPOINT}react`) // B
+      fetch(`${API_ENDPOINT}${searchTerm}`) // B
       .then((response) => response.json()) // C
       .then((result) => {
       dispatchStories({
